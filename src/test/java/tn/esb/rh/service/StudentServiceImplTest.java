@@ -20,11 +20,10 @@ import java.util.Optional;
 class StudentServiceImplTest {
     @Mock
     StudentRepository studentRepository;
-    
-    @InjectMocks
-    IStudentService studentService ;
 
-    
+    @InjectMocks
+    StudentServiceImpl studentService ;
+
     Student student = new Student(1, "name1","adress1", 20.00);
     List<Student> listStudents = new ArrayList<Student>() {
         {
@@ -33,8 +32,7 @@ class StudentServiceImplTest {
         }
     };
 
-
-
+     
     @Test
     @Order(2)
     public void testRetrieveAllStudents() {
