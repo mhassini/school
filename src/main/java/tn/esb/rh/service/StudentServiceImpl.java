@@ -23,9 +23,8 @@ public class StudentServiceImpl implements IStudentService {
 	}
 
 	public List<Student> getStudents() {
-		List<Student> ls = (List<Student>)studentRepository.findAll();
-		return ls;
-
+		return (List<Student>)studentRepository.findAll();
+		//return ls;
 	}
 
 	public void deleteStudent(Integer id) {
