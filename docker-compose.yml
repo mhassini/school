@@ -13,13 +13,12 @@ services:
       - db:/var/lib/mysql
 
   app-school-backend:
-
     image: mouradhassini/school-image:1.0.0
     restart: no
     ports:
       - "8089:8089"
     depends_on:
-      - mysqldb
+      - mysql-db
     environment:
       SPRING_APPLICATION_JSON: >-
         {
