@@ -3,7 +3,7 @@ services:
 
   mysql-db:
     image: mysql:5.7
-    restart: unless-stopped
+    restart: no
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: db
@@ -15,7 +15,7 @@ services:
   app-school-backend:
 
     image: mouradhassini/school-image:1.0.0
-    restart: on-failure
+    restart: no
     ports:
       - "8089:8089"
     depends_on:
@@ -31,8 +31,8 @@ services:
     tty: true
 
   app-school-frontend:
-    image: mouradhassini/school-image:1.0.0
-    restart: on-failure
+    image: mouradhassini/student-front-image:1.0.0
+    restart: no
     ports:
       - "85:8585"
     depends_on:
