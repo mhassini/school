@@ -33,7 +33,7 @@ services:
     image: mouradhassini/student-front-image:1.0.0
     restart: on-failure
     ports:
-      - "85:8585"
+      - "8585:85"
     depends_on:
       - app-school-backend
 
