@@ -23,7 +23,7 @@ public class StudentController {
 		return studentService.registerStudent(student);
 
 	}
-	
+	// test
 	@GetMapping("/listStudents")
 	public List <Student> getStudents() {
 

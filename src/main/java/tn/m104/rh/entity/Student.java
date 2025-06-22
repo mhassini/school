@@ -18,7 +18,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer rollNumber;
-
+// test 2
     private String name;
     private String address;
     private Double percentage;
