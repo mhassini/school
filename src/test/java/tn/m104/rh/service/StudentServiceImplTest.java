@@ -1,4 +1,4 @@
-package tn.esb.rh.service;
+package tn.m104.rh.service;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -6,13 +6,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import tn.esb.rh.entity.Student;
-import tn.esb.rh.repository.StudentRepository;
+import tn.m104.rh.entity.Student;
+import tn.m104.rh.repository.StudentRepository;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -32,10 +30,11 @@ class StudentServiceImplTest {
         }
     };
 
+    // TDD : Test Driven Development : Developpement dirigé par les Tests
 
     @Test
     @Order(2)
-    public void testRetrieveAllStudents() {
+    public void testGetStudents() {
 
         Mockito.when(studentRepository.findAll()).thenReturn(listStudents);
 
@@ -43,6 +42,7 @@ class StudentServiceImplTest {
 
         Assertions.assertEquals(2, listU.size());
     }
+
 
 
    /* @Test
@@ -72,6 +72,6 @@ class StudentServiceImplTest {
         Assertions.assertEquals(2, listStudents.size());
     }
 
+*/
 
-    */
 }

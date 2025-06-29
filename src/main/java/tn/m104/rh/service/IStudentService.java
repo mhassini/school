@@ -1,6 +1,6 @@
-package tn.esb.rh.service;
+package tn.m104.rh.service;
 
-import tn.esb.rh.entity.Student;
+import tn.m104.rh.entity.Student;
 
 import java.util.List;
 

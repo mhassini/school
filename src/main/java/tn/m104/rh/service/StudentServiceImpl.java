@@ -1,13 +1,13 @@
-package tn.esb.rh.service;
+package tn.m104.rh.service;
 
 import java.util.List;
 
-import tn.esb.rh.entity.Student;
+import tn.m104.rh.entity.Student;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 
-import tn.esb.rh.repository.StudentRepository;
+import tn.m104.rh.repository.StudentRepository;
 
 @Service
 @AllArgsConstructor
@@ -23,8 +23,8 @@ public class StudentServiceImpl implements IStudentService {
 	}
 
 	public List<Student> getStudents() {
+		//int i = 10/0;
 		return (List<Student>)studentRepository.findAll();
-		//return ls;
 	}
 
 	public void deleteStudent(Integer id) {
