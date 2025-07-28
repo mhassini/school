@@ -8,7 +8,7 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-<!-- test pull request -->
+<!-- test pull request --> 
 	<groupId>tn.esb.rh</groupId>
 	<artifactId>school</artifactId>
 	<version>1.0.0</version>
