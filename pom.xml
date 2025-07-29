@@ -9,7 +9,6 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 <!-- test pull request -->
-	<groupId>tn.esb.rh</groupId>
 	<groupId>tn.m104.rh</groupId>
 	<artifactId>school</artifactId>
 	<version>1.0.0</version>
