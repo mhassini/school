@@ -1,11 +1,10 @@
-package tn.esb.rh.entity;
+package tn.m104.rh.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-// test 1er commit 
-// 2eme modif 
+
 @Entity
 @Getter
 @Setter
@@ -17,11 +16,9 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer rollNumber;
-
-    private String name;
-    private String address;
-    private Double percentage;
-
+    Integer rollNumber;
+    String name;
+    String address;
+    Double percentage;
 
 }

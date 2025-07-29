@@ -1,12 +1,13 @@
-package tn.esb.rh.control;
+package tn.m104.rh.control;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import tn.esb.rh.entity.Student;
-import tn.esb.rh.service.IStudentService;
+import tn.m104.rh.entity.Student;
+import tn.m104.rh.service.IStudentService;
 
 @RestController
 @AllArgsConstructor
@@ -14,8 +15,8 @@ import tn.esb.rh.service.IStudentService;
 @CrossOrigin(allowedHeaders="*",origins="*")
 public class StudentController {
 
-
 	private IStudentService studentService;
+
 
 	@PostMapping("/registerStudent")
 	public Student registerStudent(@RequestBody Student student) {
@@ -23,7 +24,7 @@ public class StudentController {
 		return studentService.registerStudent(student);
 
 	}
-	
+	// test
 	@GetMapping("/listStudents")
 	public List <Student> getStudents() {
 
