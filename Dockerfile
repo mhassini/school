@@ -18,24 +18,6 @@ ENTRYPOINT ["java", "-jar", "/school-1.0.0.jar"]
 
 
 
-       stage('Docker Image') {
-            steps {
-                echo 'Creating Image with Docker : '
-                sh 'docker build -t mouradhassini/school-image:1.0.0 .'
-            }
-        }  
-        
-        stage('DockerHub') {
-            steps {
-                echo 'Pushing Image to Dockerhub : ';
-                sh 'docker login -u mouradhassini -p pwd ';
-                sh 'docker push mouradhassini/school-image:1.0.0';
-            }
-        }
-
-
-
-
 
 
 
