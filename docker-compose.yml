@@ -1,0 +1,51 @@
+services:
+
+  mysqldb:
+    image: mysql:5.7
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+
+  app-school-backend:
+    image: mouradhassini/school-image:1.0.0
+    restart: on-failure
+    ports:
+      - "8089:8089"
+    depends_on:
+      - mysqldb
+    environment:
+      SPRING_APPLICATION_JSON: >-
+        {
+          "spring.datasource.url": "jdbc:mysql://mysqldb:3306/db?createDatabaseIfNotExist=true",
+          "spring.datasource.username": "root",
+          "spring.datasource.password": "root",
+          "spring.jpa.hibernate.ddl-auto": "update"
+        }
+    tty: true
+
+  app-school-frontend:
+    image: mouradhassini/student-front-image:1.0.0
+    restart: on-failure
+    ports:
+      - "8585:85"
+    depends_on:
+      - app-school-backend
+
+volumes:
+  db:
+
+
+
+
+
+
+
+
+
+
+
